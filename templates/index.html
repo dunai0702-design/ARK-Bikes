@@ -1,0 +1,231 @@
+{% comment %} <!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Ark Bikes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1 class="logo">Ark Bikes</h1>
+    <p class="subtitle">Pedalează spre aventură </p>
+</header>
+
+<section class="hero">
+    <h2>Biciclete pentru orice traseu</h2>
+    <p>Calitate. Putere. Stil.</p>
+</section>
+
+<section class="cards">
+    <div class="card">Mountain Bike</div>
+    <div class="card">Road Bike</div>
+    <div class="card">City Bike</div>
+</section>
+
+<footer>
+    © 2026 Ark Bikes
+</footer>
+
+</body>
+</html> {% endcomment %}
+
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ark Bikes</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    text-align: center;
+}
+
+header {
+    padding: 30px;
+}
+
+.logo {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00ffff;
+}
+
+section {
+    padding: 60px 20px;
+}
+
+.hero {
+    background: rgba(255,255,255,0.1);
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    background: rgba(255,255,255,0.15);
+    padding: 20px;
+    width: 300px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: rgba(255,255,255,0.25);
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background: #00ffff;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: white;
+}
+
+footer {
+    padding: 20px;
+    background: rgba(0,0,0,0.3);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1 class="logo">Ark Bikes</h1>
+    <p class="subtitle">Pedalează spre aventură</p>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">Despre Noi</a>
+        <a href="#products">Produse</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="hero">
+    <h2>Biciclete pentru orice traseu</h2>
+    <p>
+        La Ark Bikes combinăm tehnologia modernă cu designul inovator
+        pentru a oferi biciclete performante, sigure și elegante.
+    </p>
+    <p>
+        Fie că explorezi munții, participi la curse sau mergi zilnic prin oraș,
+        avem bicicleta potrivită pentru tine.
+    </p>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>Despre Noi</h2>
+    <p>
+        Ark Bikes este un brand fondat din pasiune pentru ciclism.
+        Ne dorim să inspirăm oamenii să adopte un stil de viață activ și sănătos.
+    </p>
+    <p>
+        Folosim materiale premium, testăm fiecare model riguros și
+        colaborăm cu cicliști profesioniști pentru a oferi cea mai bună experiență.
+    </p>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+    <h2>Produsele Noastre</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1511994298241-608e28f14fde" alt="Mountain Bike">
+            <h3>Mountain Pro X</h3>
+            <p>
+                Bicicletă ideală pentru trasee montane dificile.
+                Suspensie dublă, cadru din aluminiu ușor și frâne hidraulice.
+            </p>
+            <p><strong>1200€</strong></p>
+            <button>Cumpără</button>
+        </div>
+
+        <div class="card">
+    <img src="https://images.unsplash.com/photo-1511994298241-608e28f14fde" alt="Giant Fathom Bike">
+    <h3>Giant Fathom</h3>
+    <p>
+        Bicicletă trail de la Giant, proiectată pentru terenuri variate, cu cadru din aluminiu și furcă cu suspensie eficientă.
+    </p>
+    <p><strong>999€</strong></p>
+    <button>Cumpără</button>
+</div>
+
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e" alt="City Bike">
+            <h3>City Comfort</h3>
+            <p>
+                Perfectă pentru deplasări zilnice în oraș.
+                Design modern, confort maxim și consum zero de combustibil.
+            </p>
+            <p><strong>800€</strong></p>
+            <button>Cumpără</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Dorești mai multe informații? Contactează-ne!</p>
+    <p>Email: contact@arkbikes.com</p>
+    <p>Telefon: +1 555 123 4567</p>
+    <p>Adresă: USA, New York</p>
+</section>
+
+<footer>
+    © 2026 Ark Bikes | Toate drepturile rezervate
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.logo {
+    font-size: 3rem;
+    margin-top: 40px;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgb(51, 48, 192);
+    }
+    to {
+        text-shadow: 0 0 30px rgb(183, 132, 190);
+    }
+}
+
+.hero {
+    margin: 40px auto;
+    padding: 30px;
+    width: 80%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    position: relative;
+}
+
+.silk-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.silk-effect::before {
+    content: "";
+    position: absolute;
+    inset: -50%;
+    background: linear-gradient(
+        120deg,
+        #9677b1,
+        #5f4b8b,
+        #9677b1
+    );
+    opacity: 0.6;
+    filter: blur(120px);
+    animation: silkMove 12s infinite linear;
+    z-index: 0;
+}
+
+.silk-effect h2,
+.silk-effect p {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes silkMove {
+    0% {
+        transform: translate(-20%, -20%) rotate(0deg);
+    }
+    50% {
+        transform: translate(20%, 20%) rotate(180deg);
+    }
+    100% {
+        transform: translate(-20%, -20%) rotate(360deg);
+    }
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    padding: 20px;
+    width: 150px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+footer {
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
